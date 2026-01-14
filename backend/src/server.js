@@ -14,10 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    // In dev, Vite may choose a different port (e.g., 5174). Allow localhost on any port.
-    origin: process.env.CORS_ORIGIN 
-      ? [process.env.CORS_ORIGIN, 'http://localhost:5173', 'http://localhost:5174']
-      : true,
+    origin: true, // Allow all origins
     credentials: false,
   })
 );
