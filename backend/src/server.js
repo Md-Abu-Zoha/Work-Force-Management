@@ -12,12 +12,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: true, // Allow all origins
-    credentials: false,
-  })
-);
+app.use(cors());
 app.use(morgan('dev'));
 
 // Routes
